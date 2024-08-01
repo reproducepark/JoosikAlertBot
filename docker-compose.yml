@@ -1,0 +1,11 @@
+services:
+  joosik:
+    container_name: joosik-python
+    build: 
+      context: .
+    # volumes:
+    #   - ./src:/src
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    command: "nohup python joosik.py &"
